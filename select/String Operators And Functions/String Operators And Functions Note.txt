@@ -1,0 +1,5 @@
+|| -> Join two strings
+CONCAT() -> Join two strings
+LOWER() -> Gives a lower case string
+LENGTH()-> Gives number of characters in a string
+UPPER() -> Gives an upper case string

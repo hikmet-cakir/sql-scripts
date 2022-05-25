@@ -1,0 +1,9 @@
+List Of Math Operators
++ : Add
+- : Subtract
+* : Multiply
+/ : Divide
+^ : Exponent
+I/ : Square Root
+@ : Absolute Value
+% : Remainder
