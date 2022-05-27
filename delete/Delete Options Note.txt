@@ -1,0 +1,12 @@
+					What happens if you try to delete a user when 
+On Delete Option				 a photo is still referencing it
+
+ON DELETE RESTRICT                               ->          Throw an error  (DEFAULT  )
+
+ON DELETE NO ACTION                              ->          Throw an error
+
+ON DELETE CASCADE		       ->           Delete the photo too!
+
+ON DELETE SET NULL                                ->          Set the 'user_id' of the photo to 'NULL'
+
+ON DELETE SET DEFAULT                         ->          Set the 'user_id' of the photo to a default value, if one is provided
