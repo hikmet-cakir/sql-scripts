@@ -1,0 +1,56 @@
+Inner Join
+
+photos		users
+	---------
+	---------
+	---------
+
+
+SELECT url, username
+FROM photos
+JOIN users ON user.id = photos.user_id;
+
+OR (The Same)
+
+SELECT url, username
+FROM photos
+INNER JOIN users ON user.id = photos.user_id;
+
+
+Left Outer Join
+
+photos		users
+-------------------------
+-------------------------
+-------------------------
+
+SELECT url, username
+FROM photos
+LEFT JOIN users ON users.id = photos.user_id;
+
+
+Right Outer Join
+
+photos		users
+	---------------------
+	---------------------
+	---------------------
+
+
+SELECT url, username
+FROM photos
+RIGHT JOIN users ON users.id = photos.user_id;
+
+
+Full Join
+
+photos		users
+----------------------------------
+----------------------------------
+----------------------------------
+
+SELECT url, username
+FROM photos
+FULL JOIN users ON users.id = photos.user_id;
+ 
+
