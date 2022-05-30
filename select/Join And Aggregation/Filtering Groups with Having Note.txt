@@ -1,0 +1,6 @@
+Filtering Groups with Having
+FROM -> Specifies starting set of rows to work with
+JOIN -> Merges in data from additional tables
+WHERE -> Filters the set of rows
+GROUP BY -> Groups rows by a unique set of values
+HAVING -> Filters the set of groups
