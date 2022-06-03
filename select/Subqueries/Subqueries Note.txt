@@ -1,0 +1,48 @@
+Subqueries can be used as...  
+A source of a value	-----------------------------------------------------------------------------------------------------|							         |
+ 									         |
+A source of rows------------------------------------------------------------------------------------------                   |
+								      |                  |
+A source of a column -----------------------------------------------------------------                      |                  |
+							|                     |                  |
+							|	      |                  |
+							|	      |                  |
+SELECT 							|                     |	         |
+	p1.name,						| 	      |	         |
+            |	(SELECT COUNT(name) FROM products)  | <------------------|	      |                  |
+|FROM (SELECT * FROM products) as p1                             | 		      |	          |
+|JOIN    (SELECT * FROM products) as p2 ON p1.id = p2.id | <----------------------------                   |
+| WHERE p1.id IN (SELECT id FROM products); | <------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+Understanding  the shape of a query result is key!
+
+SELECT *
+FROM Order 	->	Many rows, many columns
+
+
+SELECT id
+FROM orders 	->	Many rows, one column
+
+
+SELECT COUNT(*)
+FROM orders	->	One row, one column   (Single value)   Scalar query
+
+
+
+
+
+
+Note 2
+SELECT name, price, |XXXXXXXXXX| <------------------------- Any subquery that results in a single value (SELECT MAX(price) FROM products;)
+FROM products
+WHERE price > 876;
+
