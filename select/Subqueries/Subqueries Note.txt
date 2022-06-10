@@ -46,3 +46,30 @@ SELECT name, price, |XXXXXXXXXX| <------------------------- Any subquery that re
 FROM products
 WHERE price > 876;
 
+
+
+
+SELECT name, price_weight_ratio
+FROM |			| AS P <------------------------------------- Any subquery, so long as the outer selects/wheres/etc are compatible
+WHERE price_weight_ratio > 5;						     |
+									     |
+									     |
+									     |
+									     |
+									     |
+									     |
+									     |
+									     |
+									     |
+									     |
+							SELECT 
+								name,
+								price / weight AS price_weight_ratio
+							FROM products
+									     |
+									     |
+									     |
+									     |									     |
+									     |
+									     |
+								GOTCHA : Subquery must have an alias applied to it
