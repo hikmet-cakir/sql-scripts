@@ -73,3 +73,60 @@ WHERE price_weight_ratio > 5;						     |
 									     |
 									     |
 								GOTCHA : Subquery must have an alias applied to it
+
+
+
+
+SELECT first_name
+FROM users
+JOIN (
+|	| <=====================================Any subquery that returns data compatible with the 'ON' clause
+) AS o									||
+ON o.user_id = users.id 							||
+									||
+									||
+									||
+								SELECT user_id
+								FROM orders
+								WHERE product_id = 3
+
+
+
+
+
+Show the id of orders that involve a product with a price/weight ratio greater than 5
+
+SELECT id
+FROM orders
+WHERE product_id IN (	) <================== SELECT id FROM products WHERE price / weight > 5
+		 |
+		 |
+		 |
+		 |
+  	Structure of data allowed to be returned by subquery changes depending on the comparison operator!
+
+
+
+
+
+Data Structure with Where Subqueries
+
+Operator in the WHERE clause		Structure of data the subquery must return
+	>					Single value
+	<					Single value
+	>=					Single value
+	<=					Single value
+	=					Single value
+	<> or !=					Single value
+	IN					Single column
+	NOT IN					Single column
+
+
+
+Operator in the WHERE Clause		Structure of data the subquery must return
+	> ALL/SOME/ANY				Single column
+	< ALL/SOME/ANY				Single column
+	>= ALL/SOME/ANY				Single column
+	<= ALL/SOME/ANY				Single column
+	= ALL/SOME/ANY				Single column
+	<> ALL/SOME/ANY				Single column
