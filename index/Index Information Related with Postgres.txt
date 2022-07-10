@@ -1,0 +1,8 @@
+-- Information 1
+Postgres automatically creates an index for the primary key column of every table
+
+-- Information 2
+Postgres automatically creates an index for any 'unique' constraint
+
+-- Information 3
+These don't get listed under 'indexes' in PGAdmin!

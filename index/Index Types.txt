@@ -1,0 +1,6 @@
+B-Tree -> General purpose index. 99% of the time you want this.
+Hash -> Speeds up simple equality checks
+GiST -> Geometry, full-text search
+SP-GiST -> Clustured data, such as dates - many rows might have  the same year
+GIN -> For columns that contain arrays or JSON data
+BRIN -> Specialized for really large datasets
