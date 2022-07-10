@@ -7,7 +7,6 @@ SELECT name, country FROM cities;
 -- Example 3
 SELECT name, population, name FROM cities;
 
-
 -- Example 4
 SELECT * FROM photes
 JOIN users ON users.id = photes.user_id;
