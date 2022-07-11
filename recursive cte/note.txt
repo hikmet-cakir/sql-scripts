@@ -1,0 +1,24 @@
+Important Notes on Recursive CTE's
+
+-- Very, very different from simple CTE's
+-- Useful anytime you have a tree or graph-type data structure
+-- Must use a 'union' keyword - simple CTE's don't have to use a union!
+-- This is super, super advanced, I don't expect you to be able to write your own recursive CTE's - just understand that they exist!
+
+
+
+-- Example
+WITH RECURSIVE countdown(val) AS (
+	SELECT 3 AS val
+	UNION
+	SELECT val - 1 FROM countdown WHERE val > 1
+)
+SELECT *
+FROM countdown;
+
+
+- Define the results and working tables
+- Run the initial non-recursive statement, put the results into the results table and working table
+- Run the recursive statement replacing the table name 'countdown' with a reference to the working table
+- If recursive statement returns some rows, append them to the results table and run recursion again
+- If recursive statement returns no rows stop recursion
