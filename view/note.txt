@@ -1,0 +1,29 @@
+CREATE VIEW tags AS (
+	SELECT user_id FROM photo_tags
+	UNION ALL
+	SELECT user_id FROM caption_tags
+);
+		|
+		|
+		|
+		|
+		|
+		|
+		|
+	SELECT username, COUNT(*)
+	FROM users
+	JOIN tags ON tags.user_id = users.id
+	GROUP BY username
+	ORDER BY COUNT(*) DESC;
+
+
+Views are similar, but can be referred to in different queries in the future - they are persistent!
+
+
+
+CREATE OR REPLACE VIEW recent_posts AS (
+	SELECT *
+	FROM posts
+	ORDER BY created_at DESC
+	LIMIT 15
+);

@@ -1,0 +1,4 @@
+Views  <--------------------------------------------------------------------------------------------------------------------------------------> Materialized
+				   							    Views
+
+Query that get executed every time you refer to it							Query that gets executed only at very specific times, but the results are saved and can be referenced without rerunning the query
