@@ -1,0 +1,7 @@
+BEGIN;
+
+-- scripts
+
+COMMIT;
+
+ROLLBACK;
